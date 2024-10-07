@@ -1,0 +1,20 @@
+#include <LiquidCrystal.h>
+ 
+const int RES = PB12, EN = PB13, P1 = PB14, P2 = PA8, P3 = PA9, P4 = PA10;
+LiquidCrystal LCD(RES, EN, P1, P2, P3, P4);
+ 
+void setup() 
+{
+    // Coloums and Rows
+    LCD.begin(16, 2);
+ 
+    
+    LCD.clear();
+}
+ 
+void loop() 
+{
+    LCD.print(" Hello Dear World!");
+    LCD.setCursor(0, 1);
+    LCD.print(" github.com/Pey-mma");
+}
